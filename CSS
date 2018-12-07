@@ -1,0 +1,195 @@
+*{
+  padding:0;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+  line-height:2.9em;
+}
+#a{grid-area: a;}
+#b{grid-area: b;}
+#c{grid-area: c;}
+ 
+}
+@media (min-width: 700px) {
+body{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:minmax(100px, auto);
+  grid-template-areas: 
+    "a a a a"
+    "b b b b"
+    "c c c c"
+    "footer footer footer footer"
+    ;
+  }
+  nav  {
+    display: flex;
+  }
+}
+@media (min-width: 500px){
+body{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "a"
+    "c"
+    "b"
+    "b"
+    "b"
+    "b"
+    "footer"
+    ;
+}
+ nav  {
+    display: flex-shrink;
+    justify-content: space-around;
+  }
+  nav a {
+    display:  flex-wrap ;
+    justify-content: center;
+    
+  }
+  main{
+  display:flex-shrink;
+    flex-direction:column;
+}
+main .project-tile{
+  margin:auto;
+  justify-content:space-around;
+}
+}
+#welcome-section{
+  background:#847767;
+  width: 100vw;
+  height: 100vh;
+  min-height: 55vh;
+  min-width: 55vw;
+  background-image: url("http://www.wallpapermaiden.com/wallpaper/15425/download/1366x768/coffee-notebook-glasses-top-view-drinks.jpg");
+  background-repeat: no-repeat;
+   background-position: center;
+  background-size: cover;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+#welcome-section h1{
+ font-size: calc(32px + 1vw);
+  font-weight: bold;
+  color:white;
+  text-align: center;
+  text-shadow: 2px 2px #433e3b;
+  letter-spacing: 5px;
+  margin: auto;
+  
+}
+#welcome-section p{
+  font-size: calc(26px + 0.5vw);
+  color:white;
+  text-align: center;
+  margin: auto;
+}
+#navbar{
+  background:#433e3b;
+  position:fixed;
+  width:100%;
+  text-align: right;
+  top:0;
+  opacity: 0.5;
+  font-size: calc(16px + 0.5vw); 
+}
+
+#navbar ul {
+  position: flex;
+  width: 100%;
+}
+#navbar a{
+  display: inline-block;
+  background:#433e3b;
+  text-decoration: none;
+  color:#acbccb;
+  padding:20px;
+  line-height: normal;
+  font-size: calc(20px + 0.5vw);
+}
+#navbar a:hover{
+  background:#0f0e10; 
+  color:white;
+
+}
+main{
+  width: 100vw;
+  height: 100vh;
+  min-height: 25vh;
+  min-width: 25vw;
+  background:white;
+  display:flex;
+  flex-direction:row;
+}
+main .project-tile{
+  background:#acbccb;
+  margin:auto;
+  border-bottom: 1px solid #40434d;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align:center;
+  padding:2em;
+}
+main .project-tile a{
+  text-decoration:none;
+  color:#1a1817;
+  font-size: calc(16px + 0.2vw);
+}
+
+
+h2{
+  font-size: calc(26px + 0.5vw);
+  color:#1a1817;
+  text-align:center;
+}
+
+#social{
+  margin-top:5em;
+  display:flex;
+  width: 100vw;
+  height: 30vh;
+  min-height: 25vh;
+  min-width: 25vw;
+  background:#847767;
+  justify-content:space-evenly;
+}
+#social h2{
+  font-size: calc(26px + 0.5vw);
+  color:#1a1817;
+  text-decoration: underline;
+  margin: auto;
+}
+#profile-link{
+ text-decoration: none;
+ color:#1a1817;
+  margin: auto;
+}
+#profile{
+ text-decoration: none;
+ color:#1a1817;
+  margin: auto;
+}
+
+i{
+ font-size:40px;
+ padding:20px;
+ background:white;
+ border-radius:60px;
+  
+}
+i:hover{
+  transform:scale(1.6);
+  background:#1a1817;
+  color:#acbccb;
+}
+footer{
+  grid-area: footer;
+  background-color:white;
+  font-size:1.5em; 
+  color:#2E86AC; 
+  text-align:center;
+  text-decoration:none;
+}
